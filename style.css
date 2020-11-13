@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #333;
+  font-family: 'Arial', sans-serif;
+}
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 100px 0px;
+}
+.container {
+  max-width: 1140px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+.select__body {
+  position: relative;
+}
+.select__current {
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.select__list {
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  display: grid;
+  row-gap: 10px;
+  background: #eee;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 190px;
+  overflow-y: scroll;
+}
+.select__item {
+  list-style: none;
+  cursor: pointer;
+  background: rebeccapurple;
+  color: #fff;
+  padding: 20px;
+  transition: all 0.5s ease 0s;
+}
+.select__item.active {
+  background: green;
+}
+.select.active .select__list {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 10px);
+}
