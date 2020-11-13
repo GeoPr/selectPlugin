@@ -7,7 +7,7 @@ const getSelectTemplate = (items, placeholder) => {
       id="current"
       data-type="current"
     >
-      ${placeholder ? placeholder : 'default text instead placeholder'}
+      ${placeholder !== null && placeholder !== void 0 ? placeholder : 'default text instead placeholder'}
     </div>
     <div class="select__list">
       ${items.map((item, idx) => {
